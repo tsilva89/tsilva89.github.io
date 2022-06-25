@@ -4,6 +4,8 @@ Texts: #472d94
 Favicon: #A483FF
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -15,7 +17,7 @@ Favicon: #A483FF
 }
 
 #mainCointainer {
-    width: 90vw;
+    width: 100%;
     margin: auto;
     position: relative;
 }
@@ -23,7 +25,6 @@ Favicon: #A483FF
 header {
     height: 4rem;
     background-color: #820ad1;
-    border-radius: 5px;
     text-align: center;
     position: relative;
 }
@@ -34,29 +35,18 @@ header {
     transform: translateY(-50%);
     color: white;
     font-size: 2em;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Bowlby One SC', cursive;
+    letter-spacing: 4px;
 }
 
 section {
     border: 1px solid #820ad1;
-    border-radius: 5px;
     text-align: center;
-    padding: 40px;
-    min-height: 520px;
+    padding: 25px;
 }
 
 section p {
-    margin: 20px 0 10px 0;
-}
-
-#bugReport {
-    margin: 0;
-    position: absolute;
-    right: 10px;
-    top: 4.5rem;
-    font-size: 0.6em;
-    font-style: italic;
+    margin: 50px 0 20px 0;
 }
 
 input {
@@ -100,11 +90,11 @@ button {
     outline: none;
     background-color: #820ad1;
     color: white;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Bowlby One SC', cursive;
+    letter-spacing: 2px;
     border-radius: 7px;
     padding: 15px;
-    margin: 30px 0 20px 0;
+    margin: 25px 0 20px 0;
     text-transform: uppercase;
     filter: drop-shadow(1px 1px 3px gray);
     transition: all ease-in-out 0.3s;
@@ -137,4 +127,5 @@ li {
 
 #date {
     font-size: 0.8em;
+    margin-top: 20px;
 }
