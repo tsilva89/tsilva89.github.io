@@ -1,0 +1,140 @@
+/* Colors
+Titles: #2f1c6a
+Texts: #472d94
+Favicon: #A483FF
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, sans-serif;
+    font-size: 1.05rem;
+    color: #472d94;
+    border: none;
+}
+
+#mainCointainer {
+    width: 90vw;
+    margin: auto;
+    position: relative;
+}
+
+header {
+    height: 4rem;
+    background-color: #820ad1;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+#logo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+section {
+    border: 1px solid #820ad1;
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px;
+    min-height: 520px;
+}
+
+section p {
+    margin: 20px 0 10px 0;
+}
+
+#bugReport {
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 4.5rem;
+    font-size: 0.6em;
+    font-style: italic;
+}
+
+input {
+    border: 1px solid #820ad1;
+    border-radius: 5px;
+    display: inline-block;
+    width: 75px;
+    text-align: center;
+    padding: 0.5rem;
+    outline: none;
+    margin: 0.5em 0.3em 0.5em 0.3em;
+}
+
+input:invalid {
+    border-color: red !important;
+}
+
+input:hover {
+    background-color: #f7f6ff;
+    transition: 0.5s;
+}
+
+input:focus {
+    border: 1px solid #820ad1;
+    background-color: #f7f6ff;
+    min-width: 75px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: #820ad1;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 30px 0 20px 0;
+    text-transform: uppercase;
+    filter: drop-shadow(1px 1px 3px gray);
+    transition: all ease-in-out 0.3s;
+}
+
+button:hover {
+    background-color: #8f2ad3;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+li {
+    color: #820ad1;
+    font-size: 1.35em;
+    font-weight: 700;
+    padding: 0.3em;
+    margin: 0.5em;
+    display: inline-flex;
+    border: 2px solid #820ad1;
+    border-radius: 2em;
+    min-width: 3em;
+    min-height: 3em;
+    align-items: center;
+    justify-content: center;
+}
+
+#date {
+    font-size: 0.8em;
+}
