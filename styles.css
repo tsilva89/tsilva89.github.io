@@ -112,8 +112,9 @@ ul {
 
 @keyframes revealResult {
     0% {background-color: #820ad1;}
-    60% {background-color: #820ad1;}
-    100% {background-color: white; transform: rotateY(720deg);}
+    1% {transform: rotateY(3.6deg);}
+    40% {background-color: #820ad1;}
+    100% {background-color: white; transform: rotateY(360deg);}
 }
 
 li {
@@ -130,7 +131,10 @@ li {
     align-items: center;
     justify-content: center;
     animation-name: revealResult;
-    animation-duration: 1.7s;
+    animation-duration: 1.3s;
+    animation-fill-mode: both;
+    animation-delay: 100ms;
+    transition: all fade-in 300ms;
 }
 
 #date {
