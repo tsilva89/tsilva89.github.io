@@ -172,16 +172,17 @@ li {
 
 footer {
     position: relative;
+    text-align: center;
     background-color: #242424;
     min-height: 4rem;
-    max-width: 100%;
+    width: 100%;
 }
 
 #copy {
     position: absolute;
-    left: 50%;
+    width: 100%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     font-size: 0.7rem;
     letter-spacing: 1px;
     color: #f7f6ff;
