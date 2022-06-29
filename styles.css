@@ -1,10 +1,14 @@
-/* Colors
-Titles: #2f1c6a
-Texts: #472d94
-Favicon: #A483FF
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+:root {
+    --fav-icon: #a483ff;
+    --light-text: #ffffff;
+    --dark-text: #472d94;
+    --bg: #fdf9ff;
+    --pattern: #820ad1;
+    --hover-button: #9a37db;
+    --hover-input: #f7f6ff;
+}
 
 html {
     font-size: 18px;
@@ -15,7 +19,7 @@ html {
     padding: 0px;
     margin: 0px;
     font-family: Verdana, sans-serif;
-    color: #472d94;
+    color: var(--dark-text);
     border: none;
 
 }
@@ -27,7 +31,7 @@ html {
 
 header {
     height: 4rem;
-    background-color: #820ad1;
+    background-color: var(--pattern);
     text-align: center;
     position: relative;
     width: 100%;
@@ -37,7 +41,7 @@ header {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    color: white;
+    color: var(--light-text);
     font-size: 1.8em;
     font-family: 'Bowlby One SC', cursive;
     letter-spacing: 4px;
@@ -46,7 +50,7 @@ header {
 section {
     text-align: center;
     padding: 25px;
-    background-color: #fdf9ff;
+    background-color: var(--bg);
     width: 100%;
     margin: auto;
 }
@@ -57,7 +61,7 @@ section p {
 
 input {
     font-size: 1rem;
-    border: 1px solid #820ad1;
+    border: 1px solid var(--pattern);
     border-radius: 7px;
     display: inline-block;
     width: 75px;
@@ -72,13 +76,13 @@ input:invalid {
 }
 
 input:hover {
-    background-color: #f7f6ff;
+    background-color: var(--hover-input);
     transition: 0.5s;
 }
 
 input:focus {
-    border: 1px solid #820ad1;
-    background-color: #f7f6ff;
+    border: 1px solid var(--pattern);
+    background-color: var(--hover-input);
     min-width: 75px;
 }
 
@@ -95,8 +99,8 @@ input[type=number] {
 button {
     border: none;
     outline: none;
-    background-color: #820ad1;
-    color: white;
+    background-color: var(--pattern);
+    color: var(--light-text);
     font-family: 'Bowlby One SC', cursive;
     font-size: 1rem;
     letter-spacing: 2px;
@@ -109,13 +113,13 @@ button {
 }
 
 button:hover {
-    background-color: #9a37db;
+    background-color: var(--hover-button);
 }
 
 button:active {
     transition: all ease-in-out 50ms;
     transform: scale(0.95);
-    background-color: #820ad1;
+    background-color: var(--pattern);
 }
 
 ul {
@@ -125,42 +129,49 @@ ul {
 
 @keyframes revealResult {
     0% {
-        background-color: #820ad1;
+        background-color: var(--pattern);
+        left: 80px;
+        opacity: 0;
     }
 
     1% {
         transform: rotateY(3.6deg);
     }
 
-    50% {
-        background-color: #820ad1;
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        background-color: var(--pattern);
+    }
+
+    90% {
+        left: 0px;
     }
 
     100% {
         background-color: white;
         transform: rotateY(360deg);
-        filter: drop-shadow(0 0 1.5px #820ad1);
+        filter: drop-shadow(0 0 1.5px var(--pattern));
     }
 }
 
 li {
-    color: #820ad1;
+    color: var(--pattern);
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0.5rem;
     margin: 0.5rem;
     display: inline-flex;
-    border: 2px solid #820ad1;
+    border: 2px solid var(--pattern);
     border-radius: 4rem;
     min-width: 4rem;
     min-height: 4rem;
     align-items: center;
     justify-content: center;
-    animation-name: revealResult;
-    animation-duration: 1.3s;
-    animation-fill-mode: both;
-    animation-delay: 100ms;
-    animation-timing-function: ease-in-out;
+    position: relative;
+    animation: revealResult 1.3s ease-in-out 100ms 1 normal both;
 }
 
 #date {
@@ -173,7 +184,7 @@ li {
 footer {
     position: relative;
     text-align: center;
-    background-color: #242424;
+    background-color: var(--pattern);
     min-height: 4rem;
     width: 100%;
 }
@@ -185,11 +196,11 @@ footer {
     transform: translateY(-50%);
     font-size: 0.7rem;
     letter-spacing: 1px;
-    color: #f7f6ff;
+    color: var(--light-text);
 }
 
 #copy a {
     font-size: 0.7rem;
-    color: #f7f6ff;
+    color: var(--light-text);
     text-decoration: none;
 }
