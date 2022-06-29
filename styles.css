@@ -4,7 +4,7 @@
     --fav-icon: #a483ff;
     --light-text: #ffffff;
     --dark-text: #472d94;
-    --bg: #fdf9ff;
+    --bg: #fefdff;
     --pattern: #820ad1;
     --hover-button: #9a37db;
     --hover-input: #f7f6ff;
@@ -21,7 +21,7 @@ html {
     font-family: Verdana, sans-serif;
     color: var(--dark-text);
     border: none;
-
+    overflow: hidden;
 }
 
 #mainCointainer {
@@ -31,7 +31,7 @@ html {
 
 header {
     height: 4rem;
-    background-color: var(--pattern);
+    background-image: linear-gradient(135deg, #492cdd 0%, #ad38e2 100%);
     text-align: center;
     position: relative;
     width: 100%;
@@ -49,10 +49,9 @@ header {
 
 section {
     text-align: center;
-    padding: 25px;
+    padding: 40px 25px 25px 25px;
     background-color: var(--bg);
     width: 100%;
-    margin: auto;
 }
 
 section p {
@@ -100,6 +99,7 @@ button {
     border: none;
     outline: none;
     background-color: var(--pattern);
+    /* background-image: linear-gradient(0deg, #492cdd 0%, #ad38e2 100%); */
     color: var(--light-text);
     font-family: 'Bowlby One SC', cursive;
     font-size: 1rem;
@@ -109,17 +109,19 @@ button {
     margin: 25px 0 20px 0;
     text-transform: uppercase;
     filter: drop-shadow(1px 1px 2px gray);
-    transition: all ease-in-out 500ms;
+    transition: all ease-in-out 50ms;
 }
 
 button:hover {
-    background-color: var(--hover-button);
+    /* background-color: var(--hover-button); */
+    filter: brightness(1.2) drop-shadow(1px 1px 2px gray);
 }
 
 button:active {
     transition: all ease-in-out 50ms;
     transform: scale(0.95);
-    background-color: var(--pattern);
+    /* background-color: var(--pattern); */
+    filter: brightness(1) drop-shadow(1px 1px 2px gray);
 }
 
 ul {
@@ -184,7 +186,7 @@ li {
 footer {
     position: relative;
     text-align: center;
-    background-color: var(--pattern);
+    background-image: linear-gradient(135deg, #492cdd 0%, #ad38e2 100%);
     min-height: 4rem;
     width: 100%;
 }
