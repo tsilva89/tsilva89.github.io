@@ -62,3 +62,16 @@ function draw() {
         date.innerHTML = "Sorteio realizado em " + dateString;
     }
 }
+
+// Contador de visitantes
+const countEl = document.getElementById('count');
+
+visitCount();
+
+function visitCount() {
+    fetch('https://api.countapi.xyz/update/sorteador/sort/?amount=1')
+        .then(res => res.json())
+        .then(res => {
+            countEl.innerHTML = res.value;
+        });
+}
