@@ -56,15 +56,6 @@ function draw() {
             resultText.innerHTML = "Os números sorteados foram:";
         }
 
-        // result.innerHTML = result;
-
-        // Imprime os números sorteados que foram armazenados em "result[]" de forma individual.
-        // for (let i = 0; i < result.length; i++) {
-        //     let item = document.createElement('li');
-        //     item.appendChild(document.createTextNode(result[i]));
-        //     list.appendChild(item);
-        // }
-
         // Imprime a data e horário do sorteio.
         let d = new Date();
         let dateString = ("0" + d.getDate()).slice(-2) + "/" + ("0" + (d.getMonth() + 1)).slice(-2) + "/" + d.getFullYear() + " às " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2) + "h";
