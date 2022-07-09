@@ -63,6 +63,7 @@ input {
     border: 1px solid var(--pattern);
     border-radius: 7px;
     display: inline-block;
+    width: 75px;
     height: 38px;
     text-align: center;
     padding: 0.5rem;
