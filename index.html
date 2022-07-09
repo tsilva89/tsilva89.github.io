@@ -9,6 +9,7 @@
     <script type="text/javascript" src="./scripts.js"></script>
     <link rel="icon"
         href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANxJREFUSEvdlc0RgjAQhd9WIlag1kMO2ofxIIXoAfvBDrCSOMyIQ0I2PxtxHDnCkG/f230bwsIPLXw+fg/QNqYDsPEo75Smnfs+S8HtbPaGcOFsJYNDfaLr9HsWoG1MD2DlHvQGE3p1pLUIMKn+oTRVrgoO7lUQ8Bk+GwYYp2IGkPhsAQBL4Qwg8XkAJFkk9Tn0n6WAq2JsqMS+7wJC8xzyOSsH0SY7UzLal9RkZ9y8G6E4By8ruIUWD1osB9wik/bns8vO058sQHEOUq7PwCK8K03bogsnpYD/AzwBIGTcGY9Y/boAAAAASUVORK5CYII=">
+    <script async src="https://api.countapi.xyz/hit/sorteador/visits?callback=cb"></script>
     <title>Sorteador</title>
 </head>
 
@@ -29,11 +30,13 @@
             <span id="numbers"> número</span>
             <br>
             <span>entre </span>
-            <input type="number" id="numberMin" placeholder="Menor número do sorteio" value="1" min="1" oninput="this.value = Math.round(this.value);"
+            <input type="number" id="numberMin" placeholder="Menor número do sorteio" value="1" min="1"
+                oninput="this.value = Math.round(this.value);"
                 onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
                 onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';">
             <span> e </span>
-            <input type="number" id="numberMax" placeholder="Maior número do sorteio" value="50" min="2" oninput="this.value = Math.round(this.value);"
+            <input type="number" id="numberMax" placeholder="Maior número do sorteio" value="50" min="2"
+                oninput="this.value = Math.round(this.value);"
                 onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
                 onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';">
             <br>
@@ -41,12 +44,13 @@
             <p id="resultText"></p>
             <ul id="list"></ul>
             <p id="date"></p>
-            <p id="count">0</p>
+            <p id="count"> </p>
         </section>
 
         <footer>
             <div id="copy">
-                Feito com &#128151; por <a href="https://www.linkedin.com/in/thiagosilva77/" target="_blank">Thiago Silva</a>.
+                Feito com ❤️ por <a href="https://www.linkedin.com/in/thiagosilva77/" target="_blank">Thiago
+                    Silva</a>.
             </div>
         </footer>
     </div>

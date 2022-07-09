@@ -64,14 +64,6 @@ function draw() {
 }
 
 // Contador de visitantes
-const countEl = document.getElementById('count');
-
-visitCount();
-
-function visitCount() {
-    fetch('https://api.countapi.xyz/update/sorteador/sort/?amount=1')
-        .then(res => res.json())
-        .then(res => {
-            countEl.innerHTML = res.value;
-        });
+function cb(response) {
+    document.getElementById('count').innerText = response.value + " visitas";
 }

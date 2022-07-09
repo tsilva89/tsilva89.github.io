@@ -26,14 +26,18 @@ html {
 #mainCointainer {
     width: 100%;
     position: relative;
+    background-color: var(--bg);
 }
 
 header {
     height: 4rem;
     background: linear-gradient(135deg, #492cdd 0%, #ad38e2 100%);
     text-align: center;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     width: 100%;
+    filter: drop-shadow(1px 1px 2px gray);
 }
 
 #logo {
@@ -43,15 +47,17 @@ header {
     color: var(--light-text);
     font-size: 1.8em;
     font-family: 'Bowlby One', cursive;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
+    filter: drop-shadow(1px 1px 2px #2f1e61);
 }
 
 section {
     text-align: center;
     padding: 40px 25px 25px 25px;
-    background-color: var(--bg);
-    width: 100%;
+    position: relative;
+    max-width: 1140px;
+    margin: auto;
 }
 
 section p {
@@ -110,6 +116,7 @@ button {
     text-transform: uppercase;
     filter: drop-shadow(1px 1px 2px gray);
     transition: all ease-in-out 50ms;
+    text-shadow: 1px 1px 2px #2f1e61;
 }
 
 button:hover {
@@ -182,12 +189,32 @@ li {
     letter-spacing: 0.5px;
 }
 
+#count {
+    font-size: 0.7rem;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    border: 1px solid var(--pattern);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--hover-input);
+}
+
+@media screen and (max-width: 600px) {
+    #count{
+        position: static;
+        display: inline-flex;
+        margin: 0;
+    }
+}
+
 footer {
     position: relative;
     text-align: center;
     background: linear-gradient(135deg, #492cdd 0%, #ad38e2 100%);
     min-height: 4rem;
     width: 100%;
+    filter: drop-shadow(-1px -1px 2px gray);
 }
 
 #copy {
