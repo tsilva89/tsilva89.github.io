@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 :root {
     --fav-icon: #a483ff;
@@ -11,17 +11,16 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 * {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    font-family: Verdana, sans-serif;
+    font-family: 'Readex Pro', sans-serif;
     color: var(--dark-text);
     border: none;
-    overflow: hidden;
 }
 
 #mainCointainer {
@@ -43,8 +42,9 @@ header {
     transform: translateY(-50%);
     color: var(--light-text);
     font-size: 1.8em;
-    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Bowlby One', cursive;
     letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 section {
@@ -63,7 +63,7 @@ input {
     border: 1px solid var(--pattern);
     border-radius: 7px;
     display: inline-block;
-    width: 75px;
+    height: 38px;
     text-align: center;
     padding: 0.5rem;
     outline: none;
@@ -100,7 +100,7 @@ button {
     outline: none;
     background-color: var(--pattern);
     color: var(--light-text);
-    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Bowlby One', cursive;
     font-size: 1rem;
     letter-spacing: 2px;
     border-radius: 7px;
@@ -133,7 +133,7 @@ ul {
         opacity: 0;
     }
 
-    1% {
+    5% {
         transform: rotateY(3.6deg);
     }
 
@@ -145,7 +145,7 @@ ul {
         background-color: var(--pattern);
     }
 
-    90% {
+    95% {
         left: 0px;
     }
 
@@ -171,10 +171,11 @@ li {
     justify-content: center;
     position: relative;
     animation: revealResult 1.3s ease-in-out 100ms 1 normal both;
+    letter-spacing: 0.5px;
 }
 
 #date {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     margin-top: 20px;
     margin-bottom: 40px;
     letter-spacing: 0.5px;
