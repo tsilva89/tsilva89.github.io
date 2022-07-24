@@ -75,9 +75,8 @@ function draw() {
 
 // Ocultar teclado ao sortear
 const hideMobileKeyboard = (element) => {
-    element.addEventListener('keyup', (keyboardEvent) => {
-        const key = keyboardEvent.code || keyboardEvent.keyCode;
-        if (key === 'Enter' || key === 13) {
+    element.addEventListener('keydown', (keyboardEvent) => {
+        if (keyboardEvent.code === 'Enter') {
             element.blur();
         }
     });
