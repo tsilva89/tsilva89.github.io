@@ -70,9 +70,11 @@ function draw() {
         let dateString = ("0" + d.getDate()).slice(-2) + "/" + ("0" + (d.getMonth() + 1)).slice(-2) + "/" + d.getFullYear() + " às " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2) + "h";
         date.innerHTML = "Sorteio realizado em " + dateString;
     }
+    return;
 }
 
-const hideMobileKeyboardOnReturn = (element) => {
+// Ocultar teclado ao sortear
+const hideMobileKeyboard = (element) => {
     element.addEventListener('keyup', (keyboardEvent) => {
         const key = keyboardEvent.code || keyboardEvent.keyCode;
         if (key === 'Enter' || key === 13) {
@@ -80,3 +82,7 @@ const hideMobileKeyboardOnReturn = (element) => {
         }
     });
 };
+
+document.querySelectorAll('[type=submit]').forEach((element) => {
+    hideMobileKeyboard(element);
+});
