@@ -2,58 +2,61 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript" src="./scripts.js"></script>
-    <link rel="icon"
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANxJREFUSEvdlc0RgjAQhd9WIlag1kMO2ofxIIXoAfvBDrCSOMyIQ0I2PxtxHDnCkG/f230bwsIPLXw+fg/QNqYDsPEo75Smnfs+S8HtbPaGcOFsJYNDfaLr9HsWoG1MD2DlHvQGE3p1pLUIMKn+oTRVrgoO7lUQ8Bk+GwYYp2IGkPhsAQBL4Qwg8XkAJFkk9Tn0n6WAq2JsqMS+7wJC8xzyOSsH0SY7UzLal9RkZ9y8G6E4By8ruIUWD1osB9wik/bns8vO058sQHEOUq7PwCK8K03bogsnpYD/AzwBIGTcGY9Y/boAAAAASUVORK5CYII=">
-    <script async src="https://api.countapi.xyz/hit/sorteador/visits?callback=cb"></script>
-    <title>Sorteador</title>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="./styles.css" type="text/css" rel="stylesheet"/>
+  <link rel="icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANxJREFUSEvdlc0RgjAQhd9WIlag1kMO2ofxIIXoAfvBDrCSOMyIQ0I2PxtxHDnCkG/f230bwsIPLXw+fg/QNqYDsPEo75Smnfs+S8HtbPaGcOFsJYNDfaLr9HsWoG1MD2DlHvQGE3p1pLUIMKn+oTRVrgoO7lUQ8Bk+GwYYp2IGkPhsAQBL4Qwg8XkAJFkk9Tn0n6WAq2JsqMS+7wJC8xzyOSsH0SY7UzLal9RkZ9y8G6E4By8ruIUWD1osB9wik/bns8vO058sQHEOUq7PwCK8K03bogsnpYD/AzwBIGTcGY9Y/boAAAAASUVORK5CYII="/>
+  <title>Sorteador</title>
 </head>
 
 <body>
-    <div id="mainCointainer">
-        <header>
-            <div id="logo">
-                Sorteador
-            </div>
-        </header>
+  <div id="mainCointainer">
+    <header>
+      <div id="logo">Sorteador</div>
+    </header>
 
-        <section>
-            <span>Sortear </span>
-            <input type="number" id="numberLength" placeholder="Quantidade de números" value="1" min="1"
-                oninput="this.value = Math.round(this.value); nums()"
-                onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
-                onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';">
-            <span id="numbers"> número</span>
-            <br>
-            <span>entre </span>
-            <input type="number" id="numberMin" placeholder="Menor número do sorteio" value="1" min="1"
-                oninput="this.value = Math.round(this.value);"
-                onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
-                onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';">
-            <span> e </span>
-            <input type="number" id="numberMax" placeholder="Maior número do sorteio" value="50" min="2"
-                oninput="this.value = Math.round(this.value);"
-                onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
-                onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';">
-            <br>
-            <button id="drawButton" onclick="draw()">Sortear</button>
-            <p id="resultText"></p>
-            <ul id="list"></ul>
-            <p id="date"></p>
-            <p id="count"> </p>
-        </section>
+    <section>
+      <div>
+        <span>Sortear </span>
+        <input type="number" id="numberLength" placeholder="Quantidade de números" value="1" min="1"
+          oninput="this.value = Math.round(this.value); nums()"
+          onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
+          onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';" />
+        <span id="numbers"> número</span>
+        <br />
+        <span>entre </span>
+        <input type="number" id="numberMin" placeholder="Menor número do sorteio" value="1" min="1"
+          oninput="this.value = Math.round(this.value);"
+          onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
+          onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';" />
+        <span> e </span>
+        <input type="number" id="numberMax" placeholder="Maior número do sorteio" value="50" min="2"
+          oninput="this.value = Math.round(this.value);"
+          onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
+          onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';" />
+        <br />
+        <button id="drawButton" onclick="draw()">Sortear</button>
+      </div>
+      <div id="resultBox">
+        <p id="resultText"></p>
+        <ul id="list"></ul>
+        <p id="date"></p>
+      </div>
+      <p id="count"></p>
+    </section>
 
-        <footer>
-            <div id="copy">
-                Feito com ❤️ por <a href="https://www.linkedin.com/in/thiagosilva77/" target="_blank">Thiago
-                    Silva</a>.
-            </div>
-        </footer>
-    </div>
+    <footer>
+      <div id="copy">
+        Feito com ❤️ por
+        <a href="https://www.linkedin.com/in/thiagosilva77/" target="_blank">Thiago Silva</a>.
+      </div>
+    </footer>
+  </div>
+
+  <script async src="https://api.countapi.xyz/hit/sorteador/visits?callback=cb"></script>
+  <script src="./scripts.js" type="text/javascript"></script>
 </body>
 
 </html>

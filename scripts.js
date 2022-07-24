@@ -1,5 +1,10 @@
 // Função de Sorteio - Versão 1.0
 
+// Contador de visitas
+function cb(response) {
+    document.getElementById('count').innerText = response.value + " visitas";
+}
+
 // Imprime o texto de acordo com o campo preenchido
 function nums() {
     const maxLength = parseInt(numberLength.value);
@@ -22,7 +27,11 @@ function draw() {
     const min = parseInt(numberMin.value);
     const max = parseInt(numberMax.value);
     const maxLength = parseInt(numberLength.value);
-    var result = [];
+    const result = [];
+
+    // Exibe as bordas do resultado após o sorteio
+    let el = document.getElementById('resultBox');
+    el.style.display = 'inline-block';
 
     // Validação de preenchimento dos campos pelo usuário.
     if (maxLength < 1) {
@@ -61,9 +70,4 @@ function draw() {
         let dateString = ("0" + d.getDate()).slice(-2) + "/" + ("0" + (d.getMonth() + 1)).slice(-2) + "/" + d.getFullYear() + " às " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2) + "h";
         date.innerHTML = "Sorteio realizado em " + dateString;
     }
-}
-
-// Contador de visitantes
-function cb(response) {
-    document.getElementById('count').innerText = response.value + " visitas";
 }

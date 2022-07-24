@@ -54,14 +54,10 @@ header {
 
 section {
     text-align: center;
-    padding: 40px 25px 25px 25px;
+    padding: 40px 20px 40px 20px;
     position: relative;
     max-width: 1140px;
     margin: auto;
-}
-
-section p {
-    margin: 50px 0 20px 0;
 }
 
 input {
@@ -129,9 +125,19 @@ button:active {
     filter: brightness(1) drop-shadow(1px 1px 2px gray);
 }
 
+#resultBox {
+    display: none;
+    padding: 20px;
+    margin: 40px 0 40px 0;
+    border: 1px solid var(--pattern);
+    box-shadow: 0px 0px 10px var(--pattern);
+    border-radius: 25px;
+    background-color: var(--bg);
+}
+
 ul {
-    list-style-type: none;
-    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 @keyframes revealResult {
@@ -183,28 +189,25 @@ li {
 }
 
 #date {
-    font-size: 0.8rem;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    font-size: 0.7rem;
     letter-spacing: 0.5px;
 }
 
 #count {
     font-size: 0.7rem;
     position: absolute;
-    top: -40px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     border: 1px solid var(--pattern);
     border-radius: 5px;
     padding: 5px;
     background-color: var(--hover-input);
 }
 
-@media screen and (max-width: 600px) {
-    #count{
+@media screen and (max-width: 500px) {
+    #count {
         position: static;
         display: inline-flex;
-        margin: 0;
     }
 }
 
