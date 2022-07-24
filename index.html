@@ -18,7 +18,7 @@
     </header>
 
     <section>
-      <div>
+      <form onsubmit="draw();return false">
         <span>Sortear </span>
         <input type="number" id="numberLength" placeholder="Quantidade de números" value="1" min="1"
           oninput="this.value = Math.round(this.value); nums()"
@@ -37,8 +37,8 @@
           onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
           onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';" />
         <br />
-        <button id="drawButton" onclick="draw()">Sortear</button>
-      </div>
+        <button id="drawButton">Sortear</button>
+      </form>
       <div id="resultBox">
         <p id="resultText"></p>
         <ul id="list"></ul>
