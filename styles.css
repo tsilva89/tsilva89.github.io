@@ -107,8 +107,7 @@ input[type=number] {
     font-size: 1rem;
     letter-spacing: 2px;
     border-radius: 7px;
-    width: 150px;
-    height: 60px;
+    padding: 0.7rem;
     margin: 25px 0 20px 0;
     text-transform: uppercase;
     filter: drop-shadow(1px 1px 2px gray);
