@@ -98,7 +98,7 @@ input[type=number] {
     appearance: none;
 }
 
-#drawButton {
+input[type=submit] {
     border: none;
     outline: none;
     background-color: var(--pattern);
@@ -115,11 +115,11 @@ input[type=number] {
     text-shadow: 1px 1px 2px #2f1e61;
 }
 
-#drawButton:hover {
+input[type=submit]:hover {
     filter: brightness(1.2) drop-shadow(1px 1px 2px gray);
 }
 
-#drawButton:active {
+input[type=submit]:active {
     transition: all ease-in-out 50ms;
     transform: scale(0.95);
     filter: brightness(1) drop-shadow(1px 1px 2px gray);

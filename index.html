@@ -20,24 +20,24 @@
     <section>
       <form onsubmit="draw(); return false">
         <span>Sortear </span>
-        <input type="number" id="numberLength" placeholder="Quantidade de números" value="1" min="1"
+        <input inputmode="numeric" type="number" id="numberLength" placeholder="Quantidade de números" value="1" min="1"
           oninput="this.value = Math.round(this.value); nums()"
           onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
           onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';" />
         <span id="numbers"> número</span>
         <br />
         <span>entre </span>
-        <input type="number" id="numberMin" placeholder="Menor número do sorteio" value="1" min="1"
+        <input inputmode="numeric" type="number" id="numberMin" placeholder="Menor número do sorteio" value="1" min="1"
           oninput="this.value = Math.round(this.value);"
           onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
           onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';" />
         <span> e </span>
-        <input type="number" id="numberMax" placeholder="Maior número do sorteio" value="50" min="2"
+        <input inputmode="numeric" type="number" id="numberMax" placeholder="Maior número do sorteio" value="50" min="2"
           oninput="this.value = Math.round(this.value);"
           onkeypress="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';"
           onblur="this.style.minWidth = '75px'; this.style.width = this.value.length + 'em';" />
         <br />
-        <input type="submit" id="drawButton" value="Sortear">
+        <input type="submit" value="Sortear">
       </form>
       <div id="resultBox">
         <p id="resultText"></p>
